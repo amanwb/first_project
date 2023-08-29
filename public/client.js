@@ -32,10 +32,11 @@ function appendMessage(msg, type){
       let className = type
       mainDiv.classList.add(className, 'message')
 
-      let markup = `
-      <h4>${msg.user}</h4>
-      <p>${msg.message}</p>
-      `
+      let markup = `<h4> ${msg.user} </h4>
+                   <p> ${msg.message} </p>
+                  `
+      
+      
 
       mainDiv.innerHTML = markup
       messageArea.appendChild(mainDiv)
@@ -44,7 +45,7 @@ function appendMessage(msg, type){
 //receive message
 
 socket.on('message',(msg)=>{
-      appendMessage('msg', 'incoming')
+      appendMessage(msg, 'incoming')
       scrollToBottom()
 })
 
