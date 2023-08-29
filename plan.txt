@@ -1,0 +1,7 @@
+Todo:
+
+      [+] Create npm project
+
+[] Create index, css, js files
+Install dependencies express and nodemon (dev dep.)
+
